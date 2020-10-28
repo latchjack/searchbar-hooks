@@ -1,25 +1,75 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Books from './components/Books';
 
-function App() {
+export const App = () => {
+  const [books] = useState([
+    {
+      author: "jk rowling",
+      title: "harry potter one"
+    },
+    {
+      author: "jk rowling",
+      title: "harry potter two"
+    },
+    {
+      author: "jk rowling",
+      title: "harry potter three"
+    },
+    {
+      author: "jk rowling",
+      title: "harry potter four"
+    },
+    {
+      author: "jrr tolkien",
+      title: "lotr one"
+    },
+    {
+      author: "jrr tolkien",
+      title: "lotr two"
+    },
+    {
+      author: "jrr tolkien",
+      title: "lotr three"
+    },
+    {
+      author: "george rr martin",
+      title: "got one"
+    },
+    {
+      author: "george rr martin",
+      title: "got two"
+    },
+    {
+      author: "george rr martin",
+      title: "got three"
+    },
+    {
+      author: "george rr martin",
+      title: "got four"
+    },
+    {
+      author: "ernest cline",
+      title: "ready player one"
+    },
+    {
+      author: "ernest cline",
+      title: "ready player two"
+    },
+    {
+      author: "blake crouch",
+      title: "recursion"
+    },
+    {
+      author: "blake crouch",
+      title: "dark matter"
+    }
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Books books={books} />
     </div>
   );
-}
+};
 
 export default App;
